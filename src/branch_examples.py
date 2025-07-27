@@ -3,6 +3,7 @@ def is_even(n: int) -> bool:
     """n が偶数なら True"""
     return n % 2 == 0
 
+
 # 2. 成績判定
 def grade(score: int) -> str:
     if score >= 90:
@@ -13,10 +14,12 @@ def grade(score: int) -> str:
         return "C"
     else:
         return "F"
-    
+
+
 # 3. 閏年判定
 def is_leap(year: int) -> bool:
-    return(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
 
 # 4. サイン関数
 def sign(n: int) -> str:
@@ -26,12 +29,13 @@ def sign(n: int) -> str:
         return "負"
     return "ゼロ"
 
+
 # 5. デモ実行
 if __name__ == "__main__":
     x = int(input("整数を入力>> "))
     print("偶数です" if is_even(x) else "奇数です")
 
-    score = int(input("点数を入力>. "))
+    score = int(input("点数を入力>> "))
     print(f"評価：{grade(score)}")
 
     year = int(input("西暦を入力>> "))

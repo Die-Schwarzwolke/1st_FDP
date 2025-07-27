@@ -2,7 +2,7 @@ from __future__ import annotations
 
 # 1. list 内包
 squares = [x**2 for x in range(1, 21)]
-evens = [x for x in range(1,21) if x % 2 == 0]
+evens = [x for x in range(1, 21) if x % 2 == 0]
 print("squares:", squares)
 print("evens  :", evens)
 
@@ -24,6 +24,7 @@ div_by_thrre = list(filter(lambda x: x % 3 == 0, range(30)))
 print("doubles  :", doubles)
 print("div_by_three:", div_by_thrre)
 
+
 # 6. 小演習: シーザー暗号（3シフト）
 def caesar(text: str, shift: int = 3) -> str:
     cipher_chars: list[str] = []
@@ -34,6 +35,7 @@ def caesar(text: str, shift: int = 3) -> str:
         else:
             cipher_chars.append(chr(shifted))
     return "".join(cipher_chars)
+
 
 if __name__ == "__main__":
     print("--- Caesar cipher demo ---")

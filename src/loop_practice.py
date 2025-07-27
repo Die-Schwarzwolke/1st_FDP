@@ -1,18 +1,22 @@
 from __future__ import annotations
+
 import time
+
 
 # 1. 九九表
 def multiplocation_table() -> None:
     for i in range(1, 10):
-        row = [f"{i * j :2d}"for j in range(1, 10)]
+        row = [f"{i * j :2d}" for j in range(1, 10)]
         print(" ".join(row))
     print()
+
 
 # 2. enumerate
 def enumerate_string(s: str) -> None:
     for idx, ch in enumerate(s, start=1):
         print(f"{idx}: {ch}")
     print()
+
 
 # 3. whileでカウントダウン
 def countdown(n: int) -> None:
@@ -22,6 +26,7 @@ def countdown(n: int) -> None:
         n -= 1
     print()
 
+
 # 4. break/continue総和
 def sum_skip_multiples(limit: int) -> int:
     total = 0
@@ -30,6 +35,7 @@ def sum_skip_multiples(limit: int) -> int:
             continue
         total += i
     return total
+
 
 # 5. FizzBuzzテスト関数
 def fizzbuzz(n: int) -> list[str]:
@@ -44,6 +50,7 @@ def fizzbuzz(n: int) -> list[str]:
         else:
             res.append(str(i))
     return res
+
 
 # 6. デモ実行
 if __name__ == "__main__":

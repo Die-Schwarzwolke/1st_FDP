@@ -21,15 +21,17 @@ print("set union :", odd | even)
 print("set inter :", odd & {1, 2, 3})
 
 # comprehension preview
-squares = [i ** 2 for i in range(1, 11)]
+squares = [i**2 for i in range(1, 11)]
 unique_chars = {ch for ch in "mississippi"}
 print("squares:", squares)
 print("unique :", unique_chars)
+
 
 # mini exercise
 def add_student(db: dict[str, int], name: str, score: int) -> None:
     if score >= 80:
         db[name] = score
+
 
 if __name__ == "__main__":
     db: dict[str, int] = {}
@@ -37,7 +39,7 @@ if __name__ == "__main__":
         n = input("名前>> ")
         s = int(input("点数>> "))
         add_student(db, n, s)
-    
+
     if db:
         avg = sum(db.values()) / len(db)
         print("登録生徒:", db)

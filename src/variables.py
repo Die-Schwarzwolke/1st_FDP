@@ -1,8 +1,8 @@
 # 1. 変数の宣言
-age = 18                # int
-height = 1.75           # float (m)
-name = "クロユキ"        # str
-is_student = True       # bool
+age = 18  # int
+height = 1.75  # float (m)
+name = "クロユキ"  # str
+is_student = True  # bool
 
 # 2. 値と型を表示
 print(f"age = {age}, type = {type(age)}")

@@ -1,22 +1,27 @@
 from __future__ import annotations
-import re
+
 import csv
+import re
 from collections import Counter
 from pathlib import Path
+
 
 def normalize(text: str) -> list[str]:
     text = text.lower()
     text = re.sub(r"[^a-z']", " ", text)
     return text.split()
 
+
 def top_n(words: list[str], n: int = 10) -> list[tuple[str, int]]:
     return Counter(words).most_common(n)
+
 
 def save_csv(records: list[tuple[str, int]], path: Path) -> None:
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["word", "count"])
         writer.writerows(records)
+
 
 if __name__ == "__main__":
     src_path = Path("sample.txt")
@@ -30,7 +35,7 @@ if __name__ == "__main__":
                 text_data += line + "\n"
         except EOFError:
             pass
-        
+
     words = normalize(text_data)
     ranking = top_n(words, 10)
 
